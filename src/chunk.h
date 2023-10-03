@@ -1,0 +1,42 @@
+#include <SFML/Audio.hpp>
+#include <SFML/Graphics.hpp>
+#include <SFML/Network.hpp>
+#include <SFML/Main.hpp>
+#include <SFML/System.hpp>
+#include <SFML/Window.hpp>
+#include <SFML/OpenGL.hpp>
+#include <memory>
+
+
+const int screen_width = 128;
+const int screen_height = 128;
+const int pixel_channel = 4;
+
+
+class Chunk
+{
+    public:
+        std::shared_ptr<sf::Texture> texture;
+        sf::Sprite sprite;
+        std::shared_ptr<sf::Uint8[]> pixels;
+        sf::Vector2f chunk_position;  //Cordinate of each chunk.
+        sf::Vector2i player_pos;       //Cordinate of the chunk the player is currently in.
+
+        Chunk()
+        {
+            //Dont know why i assigned texture and pixels to make_unique even tho i defined them as smart pointers
+            //but when i change them the code breaks, offcoarse i wont try to figure out why. 
+            //if it works it works
+            texture = std::make_unique<sf::Texture>();
+            texture->create(screen_width, screen_height);
+            pixels = std::make_unique<sf::Uint8[]>(screen_width * screen_height * pixel_channel);
+        }
+
+        //Retrivies the chunk cordinates that player is currently in.
+        sf::Vector2i getPlayer_Chunkpos(sf::Vector2i player_pos)
+        {
+            int pos_chunkX = player_pos.x / 128;
+            int pos_chunkY = player_pos.y / 128;
+            return sf::Vector2i(pos_chunkX, pos_chunkY);
+        }
+};
