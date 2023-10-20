@@ -6,7 +6,7 @@ CXX_DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
 
 CXX_INCLUDES = -I/home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include -I/home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/src -isystem /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem /usr/include/AL
 
-CXX_FLAGS = -g -fPIC -fvisibility=hidden
+CXX_FLAGS = -Os -DNDEBUG -fPIC -fvisibility=hidden
 
 # Custom flags: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.o_FLAGS =  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Werror -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
 

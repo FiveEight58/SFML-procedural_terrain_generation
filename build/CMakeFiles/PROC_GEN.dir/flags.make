@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include
+CXX_INCLUDES = -I/home/fiveeight/Downloads/Projects/Proc_Gen/./lib/SFML-2.6.0/lib/include
 
-CXX_FLAGS = -g
+CXX_FLAGS = -Os -DNDEBUG
 

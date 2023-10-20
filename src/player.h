@@ -7,9 +7,10 @@
 #include <SFML/OpenGL.hpp>
 
 
-class player : public sf::CircleShape
+class player
 {
     public:
+        sf::CircleShape player;
         sf::Vector2i player_chunkpos;
         sf::Vector2i getPlayerChunkPos(sf::Vector2f playerpos) 
         {

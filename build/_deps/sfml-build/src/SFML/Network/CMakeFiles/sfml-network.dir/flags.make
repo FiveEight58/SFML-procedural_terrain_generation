@@ -6,7 +6,7 @@ CXX_DEFINES = -DSFML_NETWORK_EXPORTS
 
 CXX_INCLUDES = -I/home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include -I/home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/src
 
-CXX_FLAGS = -g -fPIC -fvisibility=hidden
+CXX_FLAGS = -Os -DNDEBUG -fPIC -fvisibility=hidden
 
 # Custom flags: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Ftp.cpp.o_FLAGS =  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Werror -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
 

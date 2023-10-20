@@ -6,7 +6,7 @@ CXX_DEFINES = -DSFML_WINDOW_EXPORTS
 
 CXX_INCLUDES = -I/home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include -I/home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/src -I/home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/extlibs/headers/vulkan -isystem /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/extlibs/headers/glad/include
 
-CXX_FLAGS = -g -fPIC -fvisibility=hidden
+CXX_FLAGS = -Os -DNDEBUG -fPIC -fvisibility=hidden
 
 # Custom flags: _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Clipboard.cpp.o_FLAGS =  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Werror -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
 

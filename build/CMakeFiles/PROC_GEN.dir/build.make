@@ -92,9 +92,6 @@ PROC_GEN_EXTERNAL_OBJECTS =
 
 PROC_GEN: CMakeFiles/PROC_GEN.dir/src/Main.cpp.o
 PROC_GEN: CMakeFiles/PROC_GEN.dir/build.make
-PROC_GEN: _deps/sfml-build/lib/libsfml-graphics-d.so.2.6.0
-PROC_GEN: _deps/sfml-build/lib/libsfml-window-d.so.2.6.0
-PROC_GEN: _deps/sfml-build/lib/libsfml-system-d.so.2.6.0
 PROC_GEN: CMakeFiles/PROC_GEN.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fiveeight/Downloads/Projects/Proc_Gen/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable PROC_GEN"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PROC_GEN.dir/link.txt --verbose=$(VERBOSE)

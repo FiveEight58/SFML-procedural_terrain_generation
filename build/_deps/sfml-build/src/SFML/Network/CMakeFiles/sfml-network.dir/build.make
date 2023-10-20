@@ -225,31 +225,31 @@ sfml__network_OBJECTS = \
 # External object files for target sfml-network
 sfml__network_EXTERNAL_OBJECTS =
 
-_deps/sfml-build/lib/libsfml-network-d.so.2.6.0: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Ftp.cpp.o
-_deps/sfml-build/lib/libsfml-network-d.so.2.6.0: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Http.cpp.o
-_deps/sfml-build/lib/libsfml-network-d.so.2.6.0: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/IpAddress.cpp.o
-_deps/sfml-build/lib/libsfml-network-d.so.2.6.0: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Packet.cpp.o
-_deps/sfml-build/lib/libsfml-network-d.so.2.6.0: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Socket.cpp.o
-_deps/sfml-build/lib/libsfml-network-d.so.2.6.0: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/SocketSelector.cpp.o
-_deps/sfml-build/lib/libsfml-network-d.so.2.6.0: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpListener.cpp.o
-_deps/sfml-build/lib/libsfml-network-d.so.2.6.0: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpSocket.cpp.o
-_deps/sfml-build/lib/libsfml-network-d.so.2.6.0: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/UdpSocket.cpp.o
-_deps/sfml-build/lib/libsfml-network-d.so.2.6.0: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Unix/SocketImpl.cpp.o
-_deps/sfml-build/lib/libsfml-network-d.so.2.6.0: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/build.make
-_deps/sfml-build/lib/libsfml-network-d.so.2.6.0: _deps/sfml-build/lib/libsfml-system-d.so.2.6.0
-_deps/sfml-build/lib/libsfml-network-d.so.2.6.0: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fiveeight/Downloads/Projects/Proc_Gen/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX shared library ../../../lib/libsfml-network-d.so"
+_deps/sfml-build/lib/libsfml-network.so.2.6.0: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Ftp.cpp.o
+_deps/sfml-build/lib/libsfml-network.so.2.6.0: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Http.cpp.o
+_deps/sfml-build/lib/libsfml-network.so.2.6.0: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/IpAddress.cpp.o
+_deps/sfml-build/lib/libsfml-network.so.2.6.0: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Packet.cpp.o
+_deps/sfml-build/lib/libsfml-network.so.2.6.0: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Socket.cpp.o
+_deps/sfml-build/lib/libsfml-network.so.2.6.0: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/SocketSelector.cpp.o
+_deps/sfml-build/lib/libsfml-network.so.2.6.0: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpListener.cpp.o
+_deps/sfml-build/lib/libsfml-network.so.2.6.0: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpSocket.cpp.o
+_deps/sfml-build/lib/libsfml-network.so.2.6.0: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/UdpSocket.cpp.o
+_deps/sfml-build/lib/libsfml-network.so.2.6.0: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Unix/SocketImpl.cpp.o
+_deps/sfml-build/lib/libsfml-network.so.2.6.0: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/build.make
+_deps/sfml-build/lib/libsfml-network.so.2.6.0: _deps/sfml-build/lib/libsfml-system.so.2.6.0
+_deps/sfml-build/lib/libsfml-network.so.2.6.0: _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fiveeight/Downloads/Projects/Proc_Gen/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX shared library ../../../lib/libsfml-network.so"
 	cd /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-build/src/SFML/Network && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sfml-network.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-build/src/SFML/Network && $(CMAKE_COMMAND) -E cmake_symlink_library ../../../lib/libsfml-network-d.so.2.6.0 ../../../lib/libsfml-network-d.so.2.6 ../../../lib/libsfml-network-d.so
+	cd /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-build/src/SFML/Network && $(CMAKE_COMMAND) -E cmake_symlink_library ../../../lib/libsfml-network.so.2.6.0 ../../../lib/libsfml-network.so.2.6 ../../../lib/libsfml-network.so
 
-_deps/sfml-build/lib/libsfml-network-d.so.2.6: _deps/sfml-build/lib/libsfml-network-d.so.2.6.0
-	@$(CMAKE_COMMAND) -E touch_nocreate _deps/sfml-build/lib/libsfml-network-d.so.2.6
+_deps/sfml-build/lib/libsfml-network.so.2.6: _deps/sfml-build/lib/libsfml-network.so.2.6.0
+	@$(CMAKE_COMMAND) -E touch_nocreate _deps/sfml-build/lib/libsfml-network.so.2.6
 
-_deps/sfml-build/lib/libsfml-network-d.so: _deps/sfml-build/lib/libsfml-network-d.so.2.6.0
-	@$(CMAKE_COMMAND) -E touch_nocreate _deps/sfml-build/lib/libsfml-network-d.so
+_deps/sfml-build/lib/libsfml-network.so: _deps/sfml-build/lib/libsfml-network.so.2.6.0
+	@$(CMAKE_COMMAND) -E touch_nocreate _deps/sfml-build/lib/libsfml-network.so
 
 # Rule to build all files generated by this target.
-_deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/build: _deps/sfml-build/lib/libsfml-network-d.so
+_deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/build: _deps/sfml-build/lib/libsfml-network.so
 .PHONY : _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/build
 
 _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/clean:

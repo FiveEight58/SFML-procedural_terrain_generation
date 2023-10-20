@@ -1,13 +1,9 @@
 CMakeFiles/PROC_GEN.dir/src/Main.cpp.o: \
  /home/fiveeight/Downloads/Projects/Proc_Gen/src/Main.cpp \
- /usr/include/stdc-predef.h \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Audio.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/System.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Config.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/System/Clock.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/System/Export.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/System/Time.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/System/Err.hpp \
+ /usr/include/stdc-predef.h /usr/include/SFML/Audio.hpp \
+ /usr/include/SFML/System.hpp /usr/include/SFML/Config.hpp \
+ /usr/include/SFML/System/Clock.hpp /usr/include/SFML/System/Export.hpp \
+ /usr/include/SFML/System/Time.hpp /usr/include/SFML/System/Err.hpp \
  /usr/include/c++/11/ostream /usr/include/c++/11/ios \
  /usr/include/c++/11/iosfwd \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -37,6 +33,7 @@ CMakeFiles/PROC_GEN.dir/src/Main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h \
  /usr/include/c++/11/exception /usr/include/c++/11/bits/exception.h \
  /usr/include/c++/11/bits/exception_ptr.h \
  /usr/include/c++/11/bits/exception_defines.h \
@@ -125,16 +122,18 @@ CMakeFiles/PROC_GEN.dir/src/Main.cpp.o: \
  /usr/include/x86_64-linux-gnu/sys/select.h \
  /usr/include/x86_64-linux-gnu/bits/select.h \
  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/alloca.h /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/x86_64-linux-gnu/bits/select2.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h \
  /usr/include/c++/11/bits/std_abs.h /usr/include/c++/11/cstdio \
  /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/c++/11/cerrno /usr/include/errno.h \
- /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
- /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h /usr/include/c++/11/cerrno \
+ /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
+ /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
@@ -153,15 +152,13 @@ CMakeFiles/PROC_GEN.dir/src/Main.cpp.o: \
  /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/System/FileInputStream.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/System/InputStream.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/System/NonCopyable.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/System/Lock.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/System/MemoryInputStream.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/System/Mutex.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/System/Sleep.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/System/String.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/System/Utf.hpp \
+ /usr/include/SFML/System/FileInputStream.hpp \
+ /usr/include/SFML/System/InputStream.hpp \
+ /usr/include/SFML/System/NonCopyable.hpp \
+ /usr/include/SFML/System/Lock.hpp \
+ /usr/include/SFML/System/MemoryInputStream.hpp \
+ /usr/include/SFML/System/Mutex.hpp /usr/include/SFML/System/Sleep.hpp \
+ /usr/include/SFML/System/String.hpp /usr/include/SFML/System/Utf.hpp \
  /usr/include/c++/11/algorithm /usr/include/c++/11/utility \
  /usr/include/c++/11/bits/stl_relops.h \
  /usr/include/c++/11/bits/stl_algo.h \
@@ -193,108 +190,91 @@ CMakeFiles/PROC_GEN.dir/src/Main.cpp.o: \
  /usr/include/libintl.h /usr/include/c++/11/bits/codecvt.h \
  /usr/include/c++/11/bits/locale_facets_nonio.tcc \
  /usr/include/c++/11/bits/locale_conv.h \
- /usr/include/c++/11/bits/unique_ptr.h \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/System/Utf.inl \
+ /usr/include/c++/11/bits/unique_ptr.h /usr/include/SFML/System/Utf.inl \
  /usr/include/c++/11/iterator /usr/include/c++/11/bits/stream_iterator.h \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/System/String.inl \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/System/Thread.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/System/Thread.inl \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/System/ThreadLocal.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/System/ThreadLocalPtr.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/System/ThreadLocalPtr.inl \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/System/Vector2.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/System/Vector2.inl \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/System/Vector3.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/System/Vector3.inl \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Audio/InputSoundFile.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Audio/Export.hpp \
- /usr/include/c++/11/cstddef \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Audio/Listener.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Audio/Music.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Audio/SoundStream.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Audio/SoundSource.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Audio/AlResource.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Audio/OutputSoundFile.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Audio/Sound.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Audio/SoundBuffer.hpp \
- /usr/include/c++/11/set /usr/include/c++/11/bits/stl_tree.h \
- /usr/include/c++/11/bits/stl_set.h \
+ /usr/include/SFML/System/String.inl /usr/include/SFML/System/Thread.hpp \
+ /usr/include/SFML/System/Thread.inl \
+ /usr/include/SFML/System/ThreadLocal.hpp \
+ /usr/include/SFML/System/ThreadLocalPtr.hpp \
+ /usr/include/SFML/System/ThreadLocalPtr.inl \
+ /usr/include/SFML/System/Vector2.hpp \
+ /usr/include/SFML/System/Vector2.inl \
+ /usr/include/SFML/System/Vector3.hpp \
+ /usr/include/SFML/System/Vector3.inl \
+ /usr/include/SFML/Audio/InputSoundFile.hpp \
+ /usr/include/SFML/Audio/Export.hpp /usr/include/SFML/Audio/Listener.hpp \
+ /usr/include/SFML/Audio/Music.hpp \
+ /usr/include/SFML/Audio/SoundStream.hpp \
+ /usr/include/SFML/Audio/SoundSource.hpp \
+ /usr/include/SFML/Audio/AlResource.hpp \
+ /usr/include/SFML/Audio/OutputSoundFile.hpp \
+ /usr/include/SFML/Audio/Sound.hpp \
+ /usr/include/SFML/Audio/SoundBuffer.hpp /usr/include/c++/11/set \
+ /usr/include/c++/11/bits/stl_tree.h /usr/include/c++/11/bits/stl_set.h \
  /usr/include/c++/11/bits/stl_multiset.h \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Audio/SoundBufferRecorder.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Audio/SoundRecorder.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Audio/SoundFileFactory.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Audio/SoundFileFactory.inl \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Audio/SoundFileReader.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Audio/SoundFileWriter.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Window.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Window/Clipboard.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Window/Context.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Window/GlResource.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Window/ContextSettings.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Window/Cursor.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Window/Event.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Window/Joystick.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Window/Keyboard.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Window/Mouse.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Window/Sensor.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Window/Touch.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Window/VideoMode.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Window/Window.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Window/WindowBase.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Window/Vulkan.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Window/WindowHandle.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Window/WindowStyle.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/BlendMode.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/Export.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/CircleShape.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/Shape.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/Drawable.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/RenderStates.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/Transform.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/Rect.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/Rect.inl \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/Transformable.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/VertexArray.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/Vertex.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/Color.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/PrimitiveType.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/ConvexShape.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/Font.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/Glyph.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/Texture.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/Image.hpp \
- /usr/include/c++/11/map /usr/include/c++/11/bits/stl_map.h \
+ /usr/include/SFML/Audio/SoundBufferRecorder.hpp \
+ /usr/include/SFML/Audio/SoundRecorder.hpp \
+ /usr/include/SFML/Audio/SoundFileFactory.hpp \
+ /usr/include/SFML/Audio/SoundFileFactory.inl \
+ /usr/include/SFML/Audio/SoundFileReader.hpp \
+ /usr/include/SFML/Audio/SoundFileWriter.hpp \
+ /usr/include/SFML/Graphics.hpp /usr/include/SFML/Window.hpp \
+ /usr/include/SFML/Window/Clipboard.hpp \
+ /usr/include/SFML/Window/Export.hpp /usr/include/SFML/Window/Context.hpp \
+ /usr/include/SFML/Window/GlResource.hpp \
+ /usr/include/SFML/Window/ContextSettings.hpp \
+ /usr/include/SFML/Window/Cursor.hpp /usr/include/SFML/Window/Event.hpp \
+ /usr/include/SFML/Window/Joystick.hpp \
+ /usr/include/SFML/Window/Keyboard.hpp /usr/include/SFML/Window/Mouse.hpp \
+ /usr/include/SFML/Window/Sensor.hpp /usr/include/SFML/Window/Touch.hpp \
+ /usr/include/SFML/Window/VideoMode.hpp \
+ /usr/include/SFML/Window/Window.hpp \
+ /usr/include/SFML/Window/WindowHandle.hpp \
+ /usr/include/SFML/Window/WindowStyle.hpp \
+ /usr/include/SFML/Graphics/BlendMode.hpp \
+ /usr/include/SFML/Graphics/Export.hpp \
+ /usr/include/SFML/Graphics/CircleShape.hpp \
+ /usr/include/SFML/Graphics/Shape.hpp \
+ /usr/include/SFML/Graphics/Drawable.hpp \
+ /usr/include/SFML/Graphics/RenderStates.hpp \
+ /usr/include/SFML/Graphics/Transform.hpp \
+ /usr/include/SFML/Graphics/Rect.hpp /usr/include/SFML/Graphics/Rect.inl \
+ /usr/include/SFML/Graphics/Transformable.hpp \
+ /usr/include/SFML/Graphics/VertexArray.hpp \
+ /usr/include/SFML/Graphics/Vertex.hpp \
+ /usr/include/SFML/Graphics/Color.hpp \
+ /usr/include/SFML/Graphics/PrimitiveType.hpp \
+ /usr/include/SFML/Graphics/ConvexShape.hpp \
+ /usr/include/SFML/Graphics/Font.hpp /usr/include/SFML/Graphics/Glyph.hpp \
+ /usr/include/SFML/Graphics/Texture.hpp \
+ /usr/include/SFML/Graphics/Image.hpp /usr/include/c++/11/map \
+ /usr/include/c++/11/bits/stl_map.h \
  /usr/include/c++/11/bits/stl_multimap.h \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/RectangleShape.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/RenderTarget.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/View.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/RenderTexture.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/RenderWindow.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/Shader.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/Glsl.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/Glsl.inl \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/Sprite.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/Text.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Graphics/VertexBuffer.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Network.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Network/Ftp.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Network/Export.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Network/TcpSocket.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Network/Socket.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Network/SocketHandle.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Network/Http.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Network/IpAddress.hpp \
- /usr/include/c++/11/istream /usr/include/c++/11/bits/istream.tcc \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Network/Packet.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Network/SocketSelector.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Network/TcpListener.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Network/UdpSocket.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/Main.hpp \
- /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-src/include/SFML/OpenGL.hpp \
- /usr/include/GL/gl.h /usr/include/GL/glext.h \
- /usr/include/KHR/khrplatform.h /usr/include/c++/11/iostream \
+ /usr/include/SFML/Graphics/RectangleShape.hpp \
+ /usr/include/SFML/Graphics/RenderTarget.hpp \
+ /usr/include/SFML/Graphics/View.hpp \
+ /usr/include/SFML/Graphics/RenderTexture.hpp \
+ /usr/include/SFML/Graphics/RenderWindow.hpp \
+ /usr/include/SFML/Graphics/Shader.hpp \
+ /usr/include/SFML/Graphics/Glsl.hpp /usr/include/SFML/Graphics/Glsl.inl \
+ /usr/include/SFML/Graphics/Sprite.hpp \
+ /usr/include/SFML/Graphics/Text.hpp \
+ /usr/include/SFML/Graphics/VertexBuffer.hpp \
+ /usr/include/SFML/Network.hpp /usr/include/SFML/Network/Ftp.hpp \
+ /usr/include/SFML/Network/Export.hpp \
+ /usr/include/SFML/Network/TcpSocket.hpp \
+ /usr/include/SFML/Network/Socket.hpp \
+ /usr/include/SFML/Network/SocketHandle.hpp \
+ /usr/include/SFML/Network/Http.hpp \
+ /usr/include/SFML/Network/IpAddress.hpp /usr/include/c++/11/istream \
+ /usr/include/c++/11/bits/istream.tcc \
+ /usr/include/SFML/Network/Packet.hpp \
+ /usr/include/SFML/Network/SocketSelector.hpp \
+ /usr/include/SFML/Network/TcpListener.hpp \
+ /usr/include/SFML/Network/UdpSocket.hpp /usr/include/SFML/Main.hpp \
+ /usr/include/SFML/OpenGL.hpp /usr/include/GL/gl.h \
+ /usr/include/GL/glext.h /usr/include/KHR/khrplatform.h \
+ /usr/include/c++/11/iostream \
  /home/fiveeight/Downloads/Projects/Proc_Gen/src/../lib/FastNoiseLite.h \
  /usr/include/c++/11/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \

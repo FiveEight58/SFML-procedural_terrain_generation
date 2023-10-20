@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
+    set(CMAKE_INSTALL_CONFIG_NAME "MinSizeRel")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -44,8 +44,8 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "bin" OR NOT CMAKE_INSTALL_COMPONENT)
   foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsfml-system-d.so.2.6.0"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsfml-system-d.so.2.6"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsfml-system.so.2.6.0"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsfml-system.so.2.6"
       )
     if(EXISTS "${file}" AND
        NOT IS_SYMLINK "${file}")
@@ -55,12 +55,12 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "bin" OR NOT CMAKE_INSTALL_COMPONENT)
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-build/lib/libsfml-system-d.so.2.6.0"
-    "/home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-build/lib/libsfml-system-d.so.2.6"
+    "/home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-build/lib/libsfml-system.so.2.6.0"
+    "/home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-build/lib/libsfml-system.so.2.6"
     )
   foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsfml-system-d.so.2.6.0"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsfml-system-d.so.2.6"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsfml-system.so.2.6.0"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsfml-system.so.2.6"
       )
     if(EXISTS "${file}" AND
        NOT IS_SYMLINK "${file}")
@@ -72,17 +72,17 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "bin" OR NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "bin" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsfml-system-d.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsfml-system-d.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsfml-system.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsfml-system.so")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsfml-system-d.so"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsfml-system.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-build/lib/libsfml-system-d.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsfml-system-d.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsfml-system-d.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-build/lib/libsfml-system.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsfml-system.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsfml-system.so")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsfml-system-d.so")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libsfml-system.so")
     endif()
   endif()
 endif()

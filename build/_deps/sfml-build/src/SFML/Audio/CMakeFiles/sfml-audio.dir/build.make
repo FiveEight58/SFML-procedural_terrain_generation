@@ -390,48 +390,48 @@ sfml__audio_OBJECTS = \
 # External object files for target sfml-audio
 sfml__audio_EXTERNAL_OBJECTS =
 
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.o
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.o
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.o
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.o
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.o
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.o
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.o
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.o
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.o
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.o
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.o
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.o
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.o
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.o
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.o
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.o
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.o
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.o
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.o
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.o
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build.make
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: _deps/sfml-build/lib/libsfml-system-d.so.2.6.0
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: /usr/lib/x86_64-linux-gnu/libopenal.so
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: /usr/lib/x86_64-linux-gnu/libvorbisenc.so
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: /usr/lib/x86_64-linux-gnu/libvorbisfile.so
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: /usr/lib/x86_64-linux-gnu/libvorbis.so
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: /usr/lib/x86_64-linux-gnu/libogg.so
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: /usr/lib/x86_64-linux-gnu/libFLAC.so
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fiveeight/Downloads/Projects/Proc_Gen/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX shared library ../../../lib/libsfml-audio-d.so"
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.o
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.o
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.o
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.o
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.o
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.o
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.o
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.o
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.o
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.o
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.o
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.o
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.o
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.o
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.o
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.o
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.o
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.o
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.o
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.o
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.o
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build.make
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: _deps/sfml-build/lib/libsfml-system.so.2.6.0
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: /usr/lib/x86_64-linux-gnu/libopenal.so
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: /usr/lib/x86_64-linux-gnu/libvorbisenc.so
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: /usr/lib/x86_64-linux-gnu/libvorbisfile.so
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: /usr/lib/x86_64-linux-gnu/libvorbis.so
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: /usr/lib/x86_64-linux-gnu/libogg.so
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: /usr/lib/x86_64-linux-gnu/libFLAC.so
+_deps/sfml-build/lib/libsfml-audio.so.2.6.0: _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fiveeight/Downloads/Projects/Proc_Gen/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX shared library ../../../lib/libsfml-audio.so"
 	cd /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-build/src/SFML/Audio && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sfml-audio.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-build/src/SFML/Audio && $(CMAKE_COMMAND) -E cmake_symlink_library ../../../lib/libsfml-audio-d.so.2.6.0 ../../../lib/libsfml-audio-d.so.2.6 ../../../lib/libsfml-audio-d.so
+	cd /home/fiveeight/Downloads/Projects/Proc_Gen/build/_deps/sfml-build/src/SFML/Audio && $(CMAKE_COMMAND) -E cmake_symlink_library ../../../lib/libsfml-audio.so.2.6.0 ../../../lib/libsfml-audio.so.2.6 ../../../lib/libsfml-audio.so
 
-_deps/sfml-build/lib/libsfml-audio-d.so.2.6: _deps/sfml-build/lib/libsfml-audio-d.so.2.6.0
-	@$(CMAKE_COMMAND) -E touch_nocreate _deps/sfml-build/lib/libsfml-audio-d.so.2.6
+_deps/sfml-build/lib/libsfml-audio.so.2.6: _deps/sfml-build/lib/libsfml-audio.so.2.6.0
+	@$(CMAKE_COMMAND) -E touch_nocreate _deps/sfml-build/lib/libsfml-audio.so.2.6
 
-_deps/sfml-build/lib/libsfml-audio-d.so: _deps/sfml-build/lib/libsfml-audio-d.so.2.6.0
-	@$(CMAKE_COMMAND) -E touch_nocreate _deps/sfml-build/lib/libsfml-audio-d.so
+_deps/sfml-build/lib/libsfml-audio.so: _deps/sfml-build/lib/libsfml-audio.so.2.6.0
+	@$(CMAKE_COMMAND) -E touch_nocreate _deps/sfml-build/lib/libsfml-audio.so
 
 # Rule to build all files generated by this target.
-_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build: _deps/sfml-build/lib/libsfml-audio-d.so
+_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build: _deps/sfml-build/lib/libsfml-audio.so
 .PHONY : _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build
 
 _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/clean:
