@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/fiveeight/Downloads/Projects/Proc_Gen/build",
-  "command": "/usr/bin/c++  -I/home/fiveeight/Downloads/Projects/Proc_Gen/./lib/SFML-2.6.0/lib/include -Os -DNDEBUG -o CMakeFiles/PROC_GEN.dir/src/Main.cpp.o -c /home/fiveeight/Downloads/Projects/Proc_Gen/src/Main.cpp",
-  "file": "/home/fiveeight/Downloads/Projects/Proc_Gen/src/Main.cpp"
-}
-]

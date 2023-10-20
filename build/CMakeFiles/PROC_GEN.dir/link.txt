@@ -1,1 +1,0 @@
-/usr/bin/c++ -Os -DNDEBUG CMakeFiles/PROC_GEN.dir/src/Main.cpp.o -o PROC_GEN   -L/home/fiveeight/Downloads/Projects/Proc_Gen/./lib/SFML-2.6.0/lib  -Wl,-rpath,/home/fiveeight/Downloads/Projects/Proc_Gen/./lib/SFML-2.6.0/lib -lsfml-graphics -lsfml-window -lsfml-system -lpthread -lrt -ldl 
