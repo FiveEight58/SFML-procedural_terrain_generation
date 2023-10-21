@@ -42,12 +42,12 @@ std::vector<Chunk> regen()
 
     // Noise maps
     FastNoiseLite moisture1 = noiseparams(1, 0.0001, FastNoiseLite::NoiseType::NoiseType_Perlin, seed1);
-    FastNoiseLite moisture2 = noiseparams(2, 0.001, FastNoiseLite::NoiseType::NoiseType_Perlin, seed1);
-    FastNoiseLite moisture3 = noiseparams(3, 0.01, FastNoiseLite::NoiseType::NoiseType_Perlin, seed1);
+    FastNoiseLite moisture2 = noiseparams(2, 0.001, FastNoiseLite::NoiseType::NoiseType_Perlin, seed2);
+    FastNoiseLite moisture3 = noiseparams(3, 0.013, FastNoiseLite::NoiseType::NoiseType_Perlin, seed3);
 
     const int screen_width = 128;
     const int screen_height = 128;
-    const int chunkSize = 32;
+    const int chunkSize = 16;
     // Chunk_Y
     for (float chunk_y = -chunkSize / 2; chunk_y < chunkSize / 2; chunk_y++)
     {
@@ -67,6 +67,7 @@ std::vector<Chunk> regen()
                     double moist2 = moisture2.GetNoise(float((screen_height * chunk_y) + x), float((screen_width * chunk_x) + y));
                     double moist3 = moisture3.GetNoise(float((screen_height * chunk_y) + x), float((screen_width * chunk_x) + y));
                     double moist = moist1 + moist2 + moist3;
+
                     moist = (moist + 1.0) / 2.0;
                     moist = int(moist * 255);
 
@@ -76,28 +77,39 @@ std::vector<Chunk> regen()
                     // cout<<"Unsigned_Y is : "<<unsigned_y<<endl;
 
                     int CurrentPixelIndex2 = ((unsigned_y * screen_width) + unsigned_x) * 4;
+
                     // Deep Water
-                    if (moist < 100)
+                    if (moist < 70)
                     {
                         chunk.pixels[CurrentPixelIndex2] = {0};
-                        chunk.pixels[CurrentPixelIndex2 + 1] = {66};
-                        chunk.pixels[CurrentPixelIndex2 + 2] = {137};
+                        chunk.pixels[CurrentPixelIndex2 + 1] = {0};
+                        chunk.pixels[CurrentPixelIndex2 + 2] = {136};
                         chunk.pixels[CurrentPixelIndex2 + 3] = {255};
                     }
-                    // Deep water
+                    
+                    //Medium level water
+                    else if (moist < 100) 
+                    {
+                        chunk.pixels[CurrentPixelIndex2] = {13}; //55
+                        chunk.pixels[CurrentPixelIndex2 + 1] = {13}; //102 
+                        chunk.pixels[CurrentPixelIndex2 + 2] = {224}; //200
+                        chunk.pixels[CurrentPixelIndex2 + 3] = {255};
+                    }
+
+                    // Shallow water
                     else if (moist < 120)
                     {
-                        chunk.pixels[CurrentPixelIndex2] = {55};
-                        chunk.pixels[CurrentPixelIndex2 + 1] = {102};
-                        chunk.pixels[CurrentPixelIndex2 + 2] = {200};
+                        chunk.pixels[CurrentPixelIndex2] = {65}; //55
+                        chunk.pixels[CurrentPixelIndex2 + 1] = {105}; //102 
+                        chunk.pixels[CurrentPixelIndex2 + 2] = {225}; //200
                         chunk.pixels[CurrentPixelIndex2 + 3] = {255};
                     }
                     // Beaches
-                    else if (moist < 122)
+                    else if (moist < 125)
                     {
-                        chunk.pixels[CurrentPixelIndex2] = {209};
-                        chunk.pixels[CurrentPixelIndex2 + 1] = {189};
-                        chunk.pixels[CurrentPixelIndex2 + 2] = {111};
+                        chunk.pixels[CurrentPixelIndex2] = {238}; //209
+                        chunk.pixels[CurrentPixelIndex2 + 1] = {214}; //189
+                        chunk.pixels[CurrentPixelIndex2 + 2] = {175}; //111
                         chunk.pixels[CurrentPixelIndex2 + 3] = {255};
                     }
                     // Plain
@@ -108,26 +120,49 @@ std::vector<Chunk> regen()
                         chunk.pixels[CurrentPixelIndex2 + 2] = {47};
                         chunk.pixels[CurrentPixelIndex2 + 3] = {255};
                     }
-                    // Jungle
-                    else if (moist < 180)
+
+                    //Shallow Jungle
+                    else if (moist < 190)
                     {
-                        chunk.pixels[CurrentPixelIndex2] = {28};
-                        chunk.pixels[CurrentPixelIndex2 + 1] = {101};
-                        chunk.pixels[CurrentPixelIndex2 + 2] = {1};
-                        chunk.pixels[CurrentPixelIndex2 + 3] = {255};
-                    }
-                    else if (moist < 200)
-                    {
-                        chunk.pixels[CurrentPixelIndex2] = {96};
-                        chunk.pixels[CurrentPixelIndex2 + 1] = {61};
+                        chunk.pixels[CurrentPixelIndex2] = {0};
+                        chunk.pixels[CurrentPixelIndex2 + 1] = {100};
                         chunk.pixels[CurrentPixelIndex2 + 2] = {0};
                         chunk.pixels[CurrentPixelIndex2 + 3] = {255};
                     }
+
+                    //Deep Jungle
+                    else if (moist < 200) 
+                    {
+                        chunk.pixels[CurrentPixelIndex2] = {0};
+                        chunk.pixels[CurrentPixelIndex2 + 1] = {66};
+                        chunk.pixels[CurrentPixelIndex2 + 2] = {0};
+                        chunk.pixels[CurrentPixelIndex2 + 3] = {255};
+                    }
+
+                    //Gravel
+                    else if (moist < 230)
+                    {
+                        chunk.pixels[CurrentPixelIndex2] = {176};
+                        chunk.pixels[CurrentPixelIndex2 + 1] = {176};
+                        chunk.pixels[CurrentPixelIndex2 + 2] = {176};
+                        chunk.pixels[CurrentPixelIndex2 + 3] = {255};
+                    }
+
+                    //Dark Gravel
+                    else if (moist < 240)
+                    {
+                        chunk.pixels[CurrentPixelIndex2] = {200};
+                        chunk.pixels[CurrentPixelIndex2 + 1] = {200};
+                        chunk.pixels[CurrentPixelIndex2 + 2] = {200};
+                        chunk.pixels[CurrentPixelIndex2 + 3] = {255};
+                    }
+
+                    //Snow
                     else
                     {
-                        chunk.pixels[CurrentPixelIndex2] = {63};
-                        chunk.pixels[CurrentPixelIndex2 + 1] = {37};
-                        chunk.pixels[CurrentPixelIndex2 + 2] = {0};
+                        chunk.pixels[CurrentPixelIndex2] = {255};
+                        chunk.pixels[CurrentPixelIndex2 + 1] = {255};
+                        chunk.pixels[CurrentPixelIndex2 + 2] = {255};
                         chunk.pixels[CurrentPixelIndex2 + 3] = {255};
                     }
                 }
@@ -137,7 +172,7 @@ std::vector<Chunk> regen()
             chunk.chunk_position.y = chunk_y;
             chunk.sprite.setPosition(screen_height * chunk_y, screen_width * chunk_x);
             chunk.sprite.setTexture(*chunk.texture);
-            chunk.texture->update(chunk.pixels.get());
+            chunk.texture->update(chunk.pixels.data());
             chunks.push_back(chunk);
         }
     }

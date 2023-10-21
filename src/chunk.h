@@ -6,8 +6,10 @@
 #include <SFML/Window.hpp>
 #include <SFML/OpenGL.hpp>
 #include <memory>
+#include <vector>
+#include <cstdint>
 
-
+const int chunkSize = 16;
 const int screen_width = 128;
 const int screen_height = 128;
 const int pixel_channel = 4;
@@ -18,7 +20,7 @@ class Chunk
     public:
         std::shared_ptr<sf::Texture> texture;
         sf::Sprite sprite;
-        std::shared_ptr<sf::Uint8[]> pixels;
+        std::vector<uint8_t> pixels;
         sf::Vector2f chunk_position;  //Cordinate of each chunk.
         sf::Vector2i player_pos;       //Cordinate of the chunk the player is currently in.
 
@@ -29,7 +31,7 @@ class Chunk
             //if it works it works
             texture = std::make_unique<sf::Texture>();
             texture->create(screen_width, screen_height);
-            pixels = std::make_unique<sf::Uint8[]>(screen_width * screen_height * pixel_channel);
+            pixels.resize(screen_height * screen_width * pixel_channel);
         }
 
         //Retrivies the chunk cordinates that player is currently in.
