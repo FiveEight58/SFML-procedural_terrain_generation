@@ -25,9 +25,6 @@ if (CMAKE_HOST_SYSTEM MATCHES Linux)
 endif()
 
 
-target_compile_features(${NAME} PRIVATE cxx_std_17)
-
-
 #Windows
 if (CMAKE_HOST_SYSTEM MATCHES Windows)
  

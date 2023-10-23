@@ -35,15 +35,21 @@ std::vector<Chunk> regen()
     random_device rd; // non-deterministic generator
     mt19937 gen(rd());
     int seed1 = gen();
-    srand48(seed1);
+    srand(seed1);
     int seed2 = rand();
-    srand48(seed2);
+    srand(seed2);
     int seed3 = rand();
+    srand(seed3);
+    int seed4 = rand();
+    srand(seed4);
 
     // Noise maps
-    FastNoiseLite moisture1 = noiseparams(1, 0.0001, FastNoiseLite::NoiseType::NoiseType_Perlin, seed1);
-    FastNoiseLite moisture2 = noiseparams(2, 0.001, FastNoiseLite::NoiseType::NoiseType_Perlin, seed2);
-    FastNoiseLite moisture3 = noiseparams(3, 0.013, FastNoiseLite::NoiseType::NoiseType_Perlin, seed3);
+    FastNoiseLite N_map1 = noiseparams(1, 0.0001, FastNoiseLite::NoiseType::NoiseType_Perlin, seed1);
+    FastNoiseLite N_map2= noiseparams(2, 0.001, FastNoiseLite::NoiseType::NoiseType_Perlin, seed2);
+    FastNoiseLite N_map3= noiseparams(3, 0.006, FastNoiseLite::NoiseType::NoiseType_Perlin, seed3);
+    FastNoiseLite N_map4= noiseparams(4, 0.006, FastNoiseLite::NoiseType::NoiseType_Perlin, seed4);
+
+
 
     const int screen_width = 128;
     const int screen_height = 128;
@@ -63,13 +69,14 @@ std::vector<Chunk> regen()
                 // pixel_X
                 for (int x = -screen_width / 2; x < screen_width / 2; ++x)
                 {
-                    double moist1 = moisture1.GetNoise(float((screen_height * chunk_y) + x), float((screen_width * chunk_x) + y));
-                    double moist2 = moisture2.GetNoise(float((screen_height * chunk_y) + x), float((screen_width * chunk_x) + y));
-                    double moist3 = moisture3.GetNoise(float((screen_height * chunk_y) + x), float((screen_width * chunk_x) + y));
-                    double moist = moist1 + moist2 + moist3;
+                    double Map1 = N_map1.GetNoise(float((screen_height * chunk_y) + x), float((screen_width * chunk_x) + y));
+                    double Map2 = N_map2.GetNoise(float((screen_height * chunk_y) + x), float((screen_width * chunk_x) + y));
+                    double Map3 = N_map3.GetNoise(float((screen_height * chunk_y) + x), float((screen_width * chunk_x) + y));
+                    double Map4 = N_map4.GetNoise(float((screen_height * chunk_y) + x), float((screen_width * chunk_x) + y));
+                    double Map = Map1 + Map2 + Map3 + Map4;
 
-                    moist = (moist + 1.0) / 2.0;
-                    moist = int(moist * 255);
+                    Map = (Map + 1.0) / 2.0;
+                    Map = int(Map* 255);
 
                     // Convert 2d representation of each index to 1d
                     int unsigned_y = y + ((screen_width / 2));
@@ -79,7 +86,7 @@ std::vector<Chunk> regen()
                     int CurrentPixelIndex2 = ((unsigned_y * screen_width) + unsigned_x) * 4;
 
                     // Deep Water
-                    if (moist < 70)
+                    if (Map < 70)
                     {
                         chunk.pixels[CurrentPixelIndex2] = {0};
                         chunk.pixels[CurrentPixelIndex2 + 1] = {0};
@@ -88,7 +95,7 @@ std::vector<Chunk> regen()
                     }
                     
                     //Medium level water
-                    else if (moist < 100) 
+                    else if (Map < 100) 
                     {
                         chunk.pixels[CurrentPixelIndex2] = {13}; //55
                         chunk.pixels[CurrentPixelIndex2 + 1] = {13}; //102 
@@ -97,7 +104,7 @@ std::vector<Chunk> regen()
                     }
 
                     // Shallow water
-                    else if (moist < 120)
+                    else if (Map < 120)
                     {
                         chunk.pixels[CurrentPixelIndex2] = {65}; //55
                         chunk.pixels[CurrentPixelIndex2 + 1] = {105}; //102 
@@ -105,7 +112,7 @@ std::vector<Chunk> regen()
                         chunk.pixels[CurrentPixelIndex2 + 3] = {255};
                     }
                     // Beaches
-                    else if (moist < 125)
+                    else if (Map < 125)
                     {
                         chunk.pixels[CurrentPixelIndex2] = {238}; //209
                         chunk.pixels[CurrentPixelIndex2 + 1] = {214}; //189
@@ -113,7 +120,7 @@ std::vector<Chunk> regen()
                         chunk.pixels[CurrentPixelIndex2 + 3] = {255};
                     }
                     // Plain
-                    else if (moist < 160)
+                    else if (Map < 160)
                     {
                         chunk.pixels[CurrentPixelIndex2] = {71};
                         chunk.pixels[CurrentPixelIndex2 + 1] = {133};
@@ -122,7 +129,7 @@ std::vector<Chunk> regen()
                     }
 
                     //Shallow Jungle
-                    else if (moist < 190)
+                    else if (Map < 190)
                     {
                         chunk.pixels[CurrentPixelIndex2] = {0};
                         chunk.pixels[CurrentPixelIndex2 + 1] = {100};
@@ -131,7 +138,7 @@ std::vector<Chunk> regen()
                     }
 
                     //Deep Jungle
-                    else if (moist < 200) 
+                    else if (Map < 200) 
                     {
                         chunk.pixels[CurrentPixelIndex2] = {0};
                         chunk.pixels[CurrentPixelIndex2 + 1] = {66};
@@ -140,7 +147,7 @@ std::vector<Chunk> regen()
                     }
 
                     //Gravel
-                    else if (moist < 230)
+                    else if (Map < 230)
                     {
                         chunk.pixels[CurrentPixelIndex2] = {176};
                         chunk.pixels[CurrentPixelIndex2 + 1] = {176};
@@ -149,7 +156,7 @@ std::vector<Chunk> regen()
                     }
 
                     //Dark Gravel
-                    else if (moist < 240)
+                    else if (Map < 240)
                     {
                         chunk.pixels[CurrentPixelIndex2] = {200};
                         chunk.pixels[CurrentPixelIndex2 + 1] = {200};
@@ -184,7 +191,7 @@ int main()
     // Camera View
     sf::View view(sf::FloatRect(200.f, 200.f, 1920.f, 1080.f));
     view.setCenter(0, 0);
-    const int mov_speed = 64;
+    const int mov_speed = 128;
 
     // Center of screen indicator
     player Player;
