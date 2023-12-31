@@ -1,49 +1,25 @@
-cmake_minimum_required(VERSION 3.25)
-set(NAME PROC_GEN)
-project(${NAME})
+cmake_minimum_required(VERSION 3.16)
+project(CMakeSFMLProject LANGUAGES CXX)
 
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
 
-#Linux
-if (CMAKE_HOST_SYSTEM MATCHES Linux)
- 
-    file(GLOB SOURCES "src/*.cpp" "lib/SFML-2.6.0/lib/*.a")
+include(FetchContent)
+FetchContent_Declare(SFML
+    GIT_REPOSITORY https://github.com/SFML/SFML.git
+    GIT_TAG 2.6.x)
+FetchContent_MakeAvailable(SFML)
 
-    include_directories("./lib/SFML-2.6.0/lib/include")
-    message(STATUS "Target system is Linux")
-    link_directories("./lib/SFML-2.6.0/lib")
+add_executable(CMakeSFMLProject src/Main.cpp)
+target_link_libraries(CMakeSFMLProject PRIVATE sfml-graphics)
+target_compile_features(CMakeSFMLProject PRIVATE cxx_std_17)
 
-    add_executable(${NAME} ${SOURCES})
- 
-    target_link_libraries(
-        ${NAME}
-        sfml-graphics
-        sfml-window
-        sfml-system
-    )
-
-
+if(WIN32)
+    add_custom_command(
+        TARGET CMakeSFMLProject
+        COMMENT "Copy OpenAL DLL"
+        PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${SFML_SOURCE_DIR}/extlibs/bin/$<IF:$<EQUAL:${CMAKE_SIZEOF_VOID_P},8>,x64,x86>/openal32.dll $<TARGET_FILE_DIR:CMakeSFMLProject>
+        VERBATIM)
 endif()
 
-
-#Windows
-if (CMAKE_HOST_SYSTEM MATCHES Windows)
- 
-    file(GLOB SOURCES "src/*.cpp")
- 
-    include_directories("./lib/SFML-2.6.0/include")
-    message(STATUS "Target system is Windows")
-    link_directories("./lib/SFML-2.6.0/winlib")
- 
-    add_executable(${NAME} ${SOURCES})
- 
-    target_link_libraries(
-        ${NAME}
-        sfml-graphics
-        sfml-window
-        sfml-system
-    )
- 
-endif()
-
-#Installation (optional)
-#install(TARGETS ${NAME})
+install(TARGETS CMakeSFMLProject)
