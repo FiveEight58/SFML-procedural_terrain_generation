@@ -117,8 +117,8 @@ FT_BEGIN_HEADER
    *     Unicode 3.1 and beyond, using UTF-32.
    *
    *   TT_APPLE_ID_VARIANT_SELECTOR ::
-   *     From Adobe, not Apple.  Not a normal cmap.  Specifies variations
-   *     on a real cmap.
+   *     From Adobe, not Apple.  Not a normal cmenumap.  Specifies variations
+   *     on a real cmenumap.
    */
 
 #define TT_APPLE_ID_DEFAULT           0 /* Unicode 1.0 */

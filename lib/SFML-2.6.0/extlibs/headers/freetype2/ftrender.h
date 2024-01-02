@@ -129,7 +129,7 @@ FT_BEGIN_HEADER
   /*    glyph_format    :: The glyph image format this renderer handles.   */
   /*                                                                       */
   /*    render_glyph    :: A method used to render the image that is in a  */
-  /*                       given glyph slot into a bitmap.                 */
+  /*                       given glyph slot into a bitmenumap.                 */
   /*                                                                       */
   /*    transform_glyph :: A method used to transform the image that is in */
   /*                       a given glyph slot.                             */

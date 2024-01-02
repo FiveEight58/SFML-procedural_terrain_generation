@@ -1,3 +1,6 @@
+#ifndef CHUNK_H
+#define CHUNK_H
+
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 #include <SFML/Network.hpp>
@@ -14,7 +17,6 @@ const int screen = 128;
 const int screen_width = screen;
 const int screen_height = screen;
 const int pixel_channel = 4;
-
 
 class Chunk
 {
@@ -34,8 +36,6 @@ class Chunk
             texture->create(screen_width, screen_height);
             pixels.resize(screen_height * screen_width * pixel_channel);
         }
-
-
         //Retrivies the chunk cordinates that player is currently in.
         sf::Vector2i getPlayer_Chunkpos(sf::Vector2i player_pos)
         {
@@ -44,3 +44,4 @@ class Chunk
             return sf::Vector2i(pos_chunkX, pos_chunkY);
         }
 };
+#endif

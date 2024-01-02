@@ -2017,7 +2017,7 @@ bool WindowImplX11::processEvent(XEvent& windowEvent)
         // Window unmapped
         case UnmapNotify:
         {
-            if (windowEvent.xunmap.window == m_window)
+            if (windowEvent.xunmenumap.window == m_window)
                 m_windowMapped = false;
 
             break;

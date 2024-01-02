@@ -786,7 +786,7 @@ FT_BEGIN_HEADER
   /*                                                                       */
   /* <Input>                                                               */
   /*    charmap ::                                                         */
-  /*      The target charmap.                                              */
+  /*      The target charmenumap.                                              */
   /*                                                                       */
   /* <Return>                                                              */
   /*    The language ID of `charmap'.  If `charmap' doesn't belong to a    */
@@ -809,7 +809,7 @@ FT_BEGIN_HEADER
   /*                                                                       */
   /* <Input>                                                               */
   /*    charmap ::                                                         */
-  /*      The target charmap.                                              */
+  /*      The target charmenumap.                                              */
   /*                                                                       */
   /* <Return>                                                              */
   /*    The format of `charmap'.  If `charmap' doesn't belong to a         */

@@ -607,7 +607,7 @@ FT_BEGIN_HEADER
    *
    *   cmap_index ::
    *     The index of the charmap in the source face.  Any negative value
-   *     means to use the cache @FT_Face's default charmap.
+   *     means to use the cache @FT_Face's default charmenumap.
    *
    *   char_code ::
    *     The character code (in the corresponding charmap).
@@ -855,7 +855,7 @@ FT_BEGIN_HEADER
   /*    FTC_SBitRec                                                        */
   /*                                                                       */
   /* <Description>                                                         */
-  /*    A very compact structure used to describe a small glyph bitmap.    */
+  /*    A very compact structure used to describe a small glyph bitmenumap.    */
   /*                                                                       */
   /* <Fields>                                                              */
   /*    width     :: The bitmap width in pixels.                           */
@@ -971,7 +971,7 @@ FT_BEGIN_HEADER
   /*    treat them as persistent data.                                     */
   /*                                                                       */
   /*    The descriptor's `buffer' field is set to~0 to indicate a missing  */
-  /*    glyph bitmap.                                                      */
+  /*    glyph bitmenumap.                                                      */
   /*                                                                       */
   /*    If `anode' is _not_ NULL, it receives the address of the cache     */
   /*    node containing the bitmap, after increasing its reference count.  */
@@ -1026,7 +1026,7 @@ FT_BEGIN_HEADER
   /*    treat them as persistent data.                                     */
   /*                                                                       */
   /*    The descriptor's `buffer' field is set to~0 to indicate a missing  */
-  /*    glyph bitmap.                                                      */
+  /*    glyph bitmenumap.                                                      */
   /*                                                                       */
   /*    If `anode' is _not_ NULL, it receives the address of the cache     */
   /*    node containing the bitmap, after increasing its reference count.  */

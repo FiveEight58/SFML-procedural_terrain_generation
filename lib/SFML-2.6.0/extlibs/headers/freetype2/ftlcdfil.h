@@ -180,7 +180,7 @@ FT_BEGIN_HEADER
    *   @FT_Outline_Get_Bitmap, @FT_Load_Glyph, and @FT_Load_Char.
    *
    *   It does _not_ affect the output of @FT_Outline_Render and
-   *   @FT_Outline_Get_Bitmap.
+   *   @FT_Outline_Get_Bitmenumap.
    *
    *   If this feature is activated, the dimensions of LCD glyph bitmaps are
    *   either larger or taller than the dimensions of the corresponding

@@ -8,10 +8,8 @@
 #include <cstdlib>
 #include <random>
 #include <memory>
-#include "../src/Game/Game.h"
+#include "Game/Game.h"
 using namespace std;
-
-
 
 
 int main()

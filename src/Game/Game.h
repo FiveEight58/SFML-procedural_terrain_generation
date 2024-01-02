@@ -1,12 +1,15 @@
-#include "../../src/MenuMap/MenuMap.h"
-#include "../../src/Renderer/renderer.h"
+#ifndef GAME_H
+#define GAME_H
+
+#include "MenuMap/MenuMap.h"
+#include "Renderer/renderer.h"
+#include "Map/Map.h"
 
 
 class Game
 {
 private:
     renderer render;
-    MenuMap map;
     std::vector<Chunk> chunks;
 
     //Game Runner
@@ -17,13 +20,13 @@ private:
     bool IsMovingDown = false;
     bool IsMovingRight = false;
     bool IsMovingLeft = false;
-
-
 public:
+    int drawcall = 0;
+    MenuMap menumap;
 
     void Run() 
     {
-        map.MapGenerationRequested = true;
+        menumap.MapGenerationRequested = true;
         while(IsRunning) 
         {
             Game::ProcessingInput();
@@ -57,12 +60,12 @@ public:
 
             if (event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::Space)
             {
-                map.MapGenerationRequested = true;
+                menumap.MapGenerationRequested = true;
             }
 
             if (event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::Enter)
             {
-                
+                menumap.menumapselected = true;
             }
 
             if (event.type == sf::Event::Resized)
@@ -102,49 +105,55 @@ public:
         //Up
         if(IsMovingUp)
         {
-            if(map.view.getCenter().y >= -((chunkSize*screen_height)/2)/2.2)
+            if(menumap.view.getCenter().y >= -((chunkSize*screen_height)/2)/2.2)
             {
-                map.view.move(0, -map.mov_speed);
+                menumap.view.move(0, -menumap.mov_speed);
             }
             
-            map.displayposition();
+            menumap.displayposition();
         }
 
         //Down
         if(IsMovingDown) 
         {
-            if(map.view.getCenter().y <= ((chunkSize*screen_height)/2)/2.2)
+            if(menumap.view.getCenter().y <= ((chunkSize*screen_height)/2)/2.2)
             {
-                map.view.move(0, map.mov_speed);
+                menumap.view.move(0, menumap.mov_speed);
             }
             
-            map.displayposition();
+            menumap.displayposition();
         }
 
         //Right
         if(IsMovingRight) 
         {
-            if(map.view.getCenter().x > -((chunkSize*screen_width)/2)/16)
+            if(menumap.view.getCenter().x > -((chunkSize*screen_width)/2)/16)
             {
-                map.view.move(-map.mov_speed, 0);
+                menumap.view.move(-menumap.mov_speed, 0);
             }
-            map.displayposition();
+            menumap.displayposition();
         }
 
         //Left
         if(IsMovingLeft)
         {
-            if(map.view.getCenter().x < ((chunkSize*screen_width)/2)/16)
+            if(menumap.view.getCenter().x < ((chunkSize*screen_width)/2)/16)
             {
-                map.view.move(map.mov_speed, 0);
+                menumap.view.move(menumap.mov_speed, 0);
             }
-            map.displayposition();
+            menumap.displayposition();
         }
 
         // Map generation
-        if (map.MapGenerationRequested) {
-            chunks = map.regen();
-            map.MapGenerationRequested = false;
+        if (menumap.MapGenerationRequested) {
+            chunks = menumap.regen(menumap.seed1);
+            menumap.MapGenerationRequested = false;
+        }
+
+        if(menumap.menumapselected)
+        {
+            Map GameMap(menumap.seed1);
+            menumap.menumapselected = false;
         }
     } 
 
@@ -152,12 +161,9 @@ public:
     void Render()
     {
         render.windows.clear();
-        render.windows.setView(map.view);
-        for (Chunk const &chunk : chunks)
-        {
-            render.windows.draw(chunk.sprite);
-        }
+        render.windows.setView(menumap.view);
         render.windows.display();
-        //render.windows.display();
     }
 };
+
+#endif

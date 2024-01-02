@@ -1,3 +1,6 @@
+#ifndef RENDERER_H
+#define RENDERER_H
+
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 #include <SFML/Network.hpp>
@@ -16,3 +19,5 @@ class renderer
             windows.setVerticalSyncEnabled(true);
         }
 };
+
+#endif

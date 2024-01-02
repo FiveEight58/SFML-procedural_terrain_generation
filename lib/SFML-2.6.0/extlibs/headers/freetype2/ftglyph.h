@@ -141,13 +141,13 @@ FT_BEGIN_HEADER
   /*                                                                       */
   /*    left   :: The left-side bearing, i.e., the horizontal distance     */
   /*              from the current pen position to the left border of the  */
-  /*              glyph bitmap.                                            */
+  /*              glyph bitmenumap.                                            */
   /*                                                                       */
   /*    top    :: The top-side bearing, i.e., the vertical distance from   */
   /*              the current pen position to the top border of the glyph  */
-  /*              bitmap.  This distance is positive for upwards~y!        */
+  /*              bitmenumap.  This distance is positive for upwards~y!        */
   /*                                                                       */
-  /*    bitmap :: A descriptor for the bitmap.                             */
+  /*    bitmap :: A descriptor for the bitmenumap.                             */
   /*                                                                       */
   /* <Note>                                                                */
   /*    You can typecast an @FT_Glyph to @FT_BitmapGlyph if you have       */

@@ -1,6 +1,6 @@
 /***************************************************************************/
 /*                                                                         */
-/*  ftbitmap.h                                                             */
+/*  ftbitmenumap.h                                                             */
 /*                                                                         */
 /*    FreeType utility functions for bitmaps (specification).              */
 /*                                                                         */
@@ -78,10 +78,10 @@ FT_BEGIN_HEADER
   /* <Input>                                                               */
   /*    library :: A handle to a library object.                           */
   /*                                                                       */
-  /*    source  :: A handle to the source bitmap.                          */
+  /*    source  :: A handle to the source bitmenumap.                          */
   /*                                                                       */
   /* <Output>                                                              */
-  /*    target  :: A handle to the target bitmap.                          */
+  /*    target  :: A handle to the target bitmenumap.                          */
   /*                                                                       */
   /* <Return>                                                              */
   /*    FreeType error code.  0~means success.                             */
@@ -98,7 +98,7 @@ FT_BEGIN_HEADER
   /*    FT_Bitmap_Embolden                                                 */
   /*                                                                       */
   /* <Description>                                                         */
-  /*    Embolden a bitmap.  The new bitmap will be about `xStrength'       */
+  /*    Embolden a bitmenumap.  The new bitmap will be about `xStrength'       */
   /*    pixels wider and `yStrength' pixels higher.  The left and bottom   */
   /*    borders are kept unchanged.                                        */
   /*                                                                       */
@@ -112,7 +112,7 @@ FT_BEGIN_HEADER
   /*                 Expressed in 26.6 pixel format.                       */
   /*                                                                       */
   /* <InOut>                                                               */
-  /*    bitmap    :: A handle to the target bitmap.                        */
+  /*    bitmap    :: A handle to the target bitmenumap.                        */
   /*                                                                       */
   /* <Return>                                                              */
   /*    FreeType error code.  0~means success.                             */
@@ -147,13 +147,13 @@ FT_BEGIN_HEADER
   /* <Input>                                                               */
   /*    library   :: A handle to a library object.                         */
   /*                                                                       */
-  /*    source    :: The source bitmap.                                    */
+  /*    source    :: The source bitmenumap.                                    */
   /*                                                                       */
   /*    alignment :: The pitch of the bitmap is a multiple of this         */
   /*                 parameter.  Common values are 1, 2, or 4.             */
   /*                                                                       */
   /* <Output>                                                              */
-  /*    target    :: The target bitmap.                                    */
+  /*    target    :: The target bitmenumap.                                    */
   /*                                                                       */
   /* <Return>                                                              */
   /*    FreeType error code.  0~means success.                             */

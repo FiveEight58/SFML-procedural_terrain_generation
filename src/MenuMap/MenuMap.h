@@ -1,3 +1,6 @@
+#ifndef MENUMAP_H
+#define MENUMAP_H
+
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 #include <SFML/Network.hpp>
@@ -9,8 +12,7 @@
 #include <random>
 #include <memory>
 #include "chunk.h"
-#include "../../lib/FastNoiseLite.h"
-using namespace std;
+#include "../../libs/FastNoiseLite.h"
 const float screenwidth = 1920.f;
 const float screenheight = 1080.f;
 class MenuMap
@@ -21,9 +23,10 @@ public:
     std::vector<Chunk> chunks;
     int mov_speed = 16;
     bool MapGenerationRequested = false;
+    bool menumapselected;
 
     sf::View view = sf::View(sf::FloatRect(200.f, 200.f, screenwidth, screenheight));
-
+    int seed1;
 
     MenuMap() 
     {
@@ -32,7 +35,7 @@ public:
 
     void displayposition() 
     {
-        cout<<"X:"<<view.getCenter().x<<"  Y:"<<view.getCenter().y<<endl;
+        std::cout<<"X:"<<view.getCenter().x<<"  Y:"<<view.getCenter().y<<std::endl;
         
     }
 
@@ -50,13 +53,13 @@ public:
         return noise;
     };
 
-    std::vector<Chunk> regen()
+    std::vector<Chunk> regen(int &seed1)
     {
 
         // Seed creation
-        random_device rd; // non-deterministic generator
-        mt19937 gen(rd());
-        int seed1 = gen();
+        std::random_device rd; // non-deterministic generator
+        std::mt19937 gen(rd());
+        seed1 = gen();
         srand(seed1);
         int seed2 = rand();
         srand(seed2);
@@ -149,7 +152,8 @@ public:
                 chunk.texture->update(chunk.pixels.data());
             }
         }
-        std::cout<<chunks.size()<<endl;
+        std::cout<<chunks.size()<<std::endl;
         return chunks;
     }
 };
+#endif

@@ -542,7 +542,7 @@ FT_BEGIN_HEADER
   /*    FT_CharMap                                                         */
   /*                                                                       */
   /* <Description>                                                         */
-  /*    A handle to a given character map.  A charmap is used to translate */
+  /*    A handle to a given character menumap.  A charmap is used to translate */
   /*    character codes in a given encoding into glyph indexes for its     */
   /*    parent's face.  Some font formats may provide several charmaps per */
   /*    font.                                                              */
@@ -563,7 +563,7 @@ FT_BEGIN_HEADER
   /*                                                                       */
   /* <Also>                                                                */
   /*    See @FT_CharMapRec for the publicly accessible fields of a given   */
-  /*    character map.                                                     */
+  /*    character menumap.                                                     */
   /*                                                                       */
   typedef struct FT_CharMapRec_*  FT_CharMap;
 
@@ -801,8 +801,8 @@ FT_BEGIN_HEADER
   /* <Fields>                                                              */
   /*    face        :: A handle to the parent face object.                 */
   /*                                                                       */
-  /*    encoding    :: An @FT_Encoding tag identifying the charmap.  Use   */
-  /*                   this with @FT_Select_Charmap.                       */
+  /*    encoding    :: An @FT_Encoding tag identifying the charmenumap.  Use   */
+  /*                   this with @FT_Select_Charmenumap.                       */
   /*                                                                       */
   /*    platform_id :: An ID number describing the platform for the        */
   /*                   following encoding ID.  This comes directly from    */
@@ -1602,7 +1602,7 @@ FT_BEGIN_HEADER
   /*                                                                       */
   /*    bitmap            :: This field is used as a bitmap descriptor     */
   /*                         when the slot format is                       */
-  /*                         @FT_GLYPH_FORMAT_BITMAP.  Note that the       */
+  /*                         @FT_GLYPH_FORMAT_BITmenumap.  Note that the       */
   /*                         address and content of the bitmap buffer can  */
   /*                         change between calls of @FT_Load_Glyph and a  */
   /*                         few other functions.                          */
@@ -1610,7 +1610,7 @@ FT_BEGIN_HEADER
   /*    bitmap_left       :: The bitmap's left bearing expressed in        */
   /*                         integer pixels.  Only valid if the format is  */
   /*                         @FT_GLYPH_FORMAT_BITMAP, this is, if the      */
-  /*                         glyph slot contains a bitmap.                 */
+  /*                         glyph slot contains a bitmenumap.                 */
   /*                                                                       */
   /*    bitmap_top        :: The bitmap's top bearing expressed in integer */
   /*                         pixels.  Remember that this is the distance   */
@@ -1673,7 +1673,7 @@ FT_BEGIN_HEADER
   /*    Note that `slot->bitmap_left' and `slot->bitmap_top' are also used */
   /*    to specify the position of the bitmap relative to the current pen  */
   /*    position (e.g., coordinates (0,0) on the baseline).  Of course,    */
-  /*    `slot->format' is also changed to @FT_GLYPH_FORMAT_BITMAP.         */
+  /*    `slot->format' is also changed to @FT_GLYPH_FORMAT_BITmenumap.         */
   /*                                                                       */
   /* <Note>                                                                */
   /*    Here a small pseudo code fragment that shows how to use            */
@@ -2804,7 +2804,7 @@ FT_BEGIN_HEADER
   /*                                                                       */
   /*    For bitmap fonts and embedded bitmaps the `bitmap->pixel_mode'     */
   /*    field in the @FT_GlyphSlotRec structure gives the format of the    */
-  /*    returned bitmap.                                                   */
+  /*    returned bitmenumap.                                                   */
   /*                                                                       */
   /*    All modes except @FT_RENDER_MODE_MONO use 256 levels of opacity.   */
   /*                                                                       */
@@ -2872,7 +2872,7 @@ FT_BEGIN_HEADER
   /*    FT_Render_Glyph                                                    */
   /*                                                                       */
   /* <Description>                                                         */
-  /*    Convert a given glyph image to a bitmap.  It does so by inspecting */
+  /*    Convert a given glyph image to a bitmenumap.  It does so by inspecting */
   /*    the glyph image format, finding the relevant renderer, and         */
   /*    invoking it.                                                       */
   /*                                                                       */
@@ -2882,7 +2882,7 @@ FT_BEGIN_HEADER
   /*                                                                       */
   /* <Input>                                                               */
   /*    render_mode :: This is the render mode used to render the glyph    */
-  /*                   image into a bitmap.  See @FT_Render_Mode for a     */
+  /*                   image into a bitmenumap.  See @FT_Render_Mode for a     */
   /*                   list of possible values.                            */
   /*                                                                       */
   /* <Return>                                                              */
@@ -3127,7 +3127,7 @@ FT_BEGIN_HEADER
   /*    face    :: A handle to the source face object.                     */
   /*                                                                       */
   /* <Input>                                                               */
-  /*    charmap :: A handle to the selected charmap.                       */
+  /*    charmap :: A handle to the selected charmenumap.                       */
   /*                                                                       */
   /* <Return>                                                              */
   /*    FreeType error code.  0~means success.                             */
@@ -3150,11 +3150,11 @@ FT_BEGIN_HEADER
    *   FT_Get_Charmap_Index
    *
    * @description:
-   *   Retrieve index of a given charmap.
+   *   Retrieve index of a given charmenumap.
    *
    * @input:
    *   charmap ::
-   *     A handle to a charmap.
+   *     A handle to a charmenumap.
    *
    * @return:
    *   The index into the array of character maps within the face to which
@@ -3222,7 +3222,7 @@ FT_BEGIN_HEADER
   /*                                                                       */
   /* <Note>                                                                */
   /*    You should use this function with @FT_Get_Next_Char to be able to  */
-  /*    parse all character codes available in a given charmap.  The code  */
+  /*    parse all character codes available in a given charmenumap.  The code  */
   /*    should look like this:                                             */
   /*                                                                       */
   /*    {                                                                  */
@@ -3271,11 +3271,11 @@ FT_BEGIN_HEADER
   /*                                                                       */
   /* <Note>                                                                */
   /*    You should use this function with @FT_Get_First_Char to walk       */
-  /*    over all character codes available in a given charmap.  See the    */
+  /*    over all character codes available in a given charmenumap.  See the    */
   /*    note for this function for a simple code example.                  */
   /*                                                                       */
   /*    Note that `*agindex' is set to~0 when there are no more codes in   */
-  /*    the charmap.                                                       */
+  /*    the charmenumap.                                                       */
   /*                                                                       */
   FT_EXPORT( FT_ULong )
   FT_Get_Next_Char( FT_Face    face,
@@ -3508,7 +3508,7 @@ FT_BEGIN_HEADER
   /*                                                                       */
   /*    A variant may be either `default' or `non-default'.  A default     */
   /*    variant is the one you will get for that code point if you look it */
-  /*    up in the standard Unicode cmap.  A non-default variant is a       */
+  /*    up in the standard Unicode cmenumap.  A non-default variant is a       */
   /*    different glyph.                                                   */
   /*                                                                       */
   /*************************************************************************/

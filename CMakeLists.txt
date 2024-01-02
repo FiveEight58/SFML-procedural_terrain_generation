@@ -13,6 +13,9 @@ FetchContent_MakeAvailable(SFML)
 add_executable(CMakeSFMLProject src/Main.cpp)
 target_link_libraries(CMakeSFMLProject PRIVATE sfml-graphics)
 target_compile_features(CMakeSFMLProject PRIVATE cxx_std_17)
+target_include_directories(CMakeSFMLProject PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/lib>)
 
 if(WIN32)
     add_custom_command(

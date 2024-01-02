@@ -1,19 +1,16 @@
+#ifndef MAP_H
+#define MAP_H
+
+#include <iostream>
+
 class Map
 {
-private:
-    /* data */
 public:
-    Map() 
-    {
 
-    };
-
-    void generate_Map() 
+    Map(int seed)
     {
-        
+        std::cout<<seed<<std::endl;
     }
 };
 
-Map::Map(/* args */)
-{
-}
+#endif

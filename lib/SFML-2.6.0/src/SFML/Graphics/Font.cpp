@@ -651,8 +651,8 @@ Glyph Font::loadGlyph(Uint32 codePoint, unsigned int characterSize, bool bold, f
     glyph.lsbDelta = static_cast<int>(face->glyph->lsb_delta);
     glyph.rsbDelta = static_cast<int>(face->glyph->rsb_delta);
 
-    unsigned int width  = bitmap.width;
-    unsigned int height = bitmap.rows;
+    unsigned int width  = bitmenumap.width;
+    unsigned int height = bitmenumap.rows;
 
     if ((width > 0) && (height > 0))
     {
@@ -679,8 +679,8 @@ Glyph Font::loadGlyph(Uint32 codePoint, unsigned int characterSize, bool bold, f
         // Compute the glyph's bounding box
         glyph.bounds.left   = static_cast<float>( bitmapGlyph->left);
         glyph.bounds.top    = static_cast<float>(-bitmapGlyph->top);
-        glyph.bounds.width  = static_cast<float>( bitmap.width);
-        glyph.bounds.height = static_cast<float>( bitmap.rows);
+        glyph.bounds.width  = static_cast<float>( bitmenumap.width);
+        glyph.bounds.height = static_cast<float>( bitmenumap.rows);
 
         // Resize the pixel buffer to the new size and fill it with transparent white pixels
         m_pixelBuffer.resize(width * height * 4);
@@ -697,8 +697,8 @@ Glyph Font::loadGlyph(Uint32 codePoint, unsigned int characterSize, bool bold, f
         }
 
         // Extract the glyph's pixels from the bitmap
-        const Uint8* pixels = bitmap.buffer;
-        if (bitmap.pixel_mode == FT_PIXEL_MODE_MONO)
+        const Uint8* pixels = bitmenumap.buffer;
+        if (bitmenumap.pixel_mode == FT_PIXEL_MODE_MONO)
         {
             // Pixels are 1 bit monochrome values
             for (unsigned int y = padding; y < height - padding; ++y)
@@ -709,7 +709,7 @@ Glyph Font::loadGlyph(Uint32 codePoint, unsigned int characterSize, bool bold, f
                     std::size_t index = x + y * width;
                     m_pixelBuffer[index * 4 + 3] = ((pixels[(x - padding) / 8]) & (1 << (7 - ((x - padding) % 8)))) ? 255 : 0;
                 }
-                pixels += bitmap.pitch;
+                pixels += bitmenumap.pitch;
             }
         }
         else
@@ -723,7 +723,7 @@ Glyph Font::loadGlyph(Uint32 codePoint, unsigned int characterSize, bool bold, f
                     std::size_t index = x + y * width;
                     m_pixelBuffer[index * 4 + 3] = pixels[x - padding];
                 }
-                pixels += bitmap.pitch;
+                pixels += bitmenumap.pitch;
             }
         }
 

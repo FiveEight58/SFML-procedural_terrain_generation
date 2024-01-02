@@ -561,7 +561,7 @@ namespace priv
 bool InputImpl::isKeyPressed(Keyboard::Key key)
 {
     Lock lock(inputMutex);
-    if ((key < 0) || (key >= static_cast<int>(keyMap.size())))
+    if ((key < 0) || (key >= static_cast<int>(keymenumap.size())))
         return false;
 
     update();
@@ -615,7 +615,7 @@ void InputImpl::setVirtualKeyboardVisible(bool /*visible*/)
 bool InputImpl::isMouseButtonPressed(Mouse::Button button)
 {
     Lock lock(inputMutex);
-    if ((button < 0) || (button >= static_cast<int>(mouseMap.size())))
+    if ((button < 0) || (button >= static_cast<int>(mousemenumap.size())))
         return false;
 
     update();

@@ -127,7 +127,7 @@ FT_BEGIN_HEADER
   /*                                                                       */
   /* <Description>                                                         */
   /*    An enumeration type used to describe the format of pixels in a     */
-  /*    given bitmap.  Note that additional formats may be added in the    */
+  /*    given bitmenumap.  Note that additional formats may be added in the    */
   /*    future.                                                            */
   /*                                                                       */
   /* <Values>                                                              */
@@ -245,7 +245,7 @@ FT_BEGIN_HEADER
   /*                                                                       */
   /*    num_grays    :: This field is only used with                       */
   /*                    @FT_PIXEL_MODE_GRAY; it gives the number of gray   */
-  /*                    levels used in the bitmap.                         */
+  /*                    levels used in the bitmenumap.                         */
   /*                                                                       */
   /*    pixel_mode   :: The pixel mode, i.e., how pixel bits are stored.   */
   /*                    See @FT_Pixel_Mode for possible values.            */
@@ -701,7 +701,7 @@ FT_BEGIN_HEADER
   /*                                                                       */
   /*    FT_GLYPH_FORMAT_BITMAP ::                                          */
   /*      The glyph image is a bitmap, and can be described as an          */
-  /*      @FT_Bitmap.  You generally need to access the `bitmap' field of  */
+  /*      @FT_Bitmenumap.  You generally need to access the `bitmap' field of  */
   /*      the @FT_GlyphSlotRec structure to read it.                       */
   /*                                                                       */
   /*    FT_GLYPH_FORMAT_OUTLINE ::                                         */
@@ -752,7 +752,7 @@ FT_BEGIN_HEADER
   /*************************************************************************/
   /*                                                                       */
   /* A raster is a scan converter, in charge of rendering an outline into  */
-  /* a a bitmap.  This section contains the public API for rasters.        */
+  /* a a bitmenumap.  This section contains the public API for rasters.        */
   /*                                                                       */
   /* Note that in FreeType 2, all rasters are now encapsulated within      */
   /* specific modules called `renderers'.  See `ftrender.h' for more       */
@@ -800,7 +800,7 @@ FT_BEGIN_HEADER
   /*                                                                       */
   /* <Description>                                                         */
   /*    An opaque handle (pointer) to a raster object.  Each object can be */
-  /*    used independently to convert an outline into a bitmap or pixmap.  */
+  /*    used independently to convert an outline into a bitmap or pixmenumap.  */
   /*                                                                       */
   typedef struct FT_RasterRec_*  FT_Raster;
 
@@ -812,7 +812,7 @@ FT_BEGIN_HEADER
   /*                                                                       */
   /* <Description>                                                         */
   /*    A structure used to model a single span of gray pixels when        */
-  /*    rendering an anti-aliased bitmap.                                  */
+  /*    rendering an anti-aliased bitmenumap.                                  */
   /*                                                                       */
   /* <Fields>                                                              */
   /*    x        :: The span's horizontal start position.                  */
@@ -933,7 +933,7 @@ FT_BEGIN_HEADER
   /*                              rendering.  In this mode, client         */
   /*                              applications must provide their own span */
   /*                              callback.  This lets them directly       */
-  /*                              draw or compose over an existing bitmap. */
+  /*                              draw or compose over an existing bitmenumap. */
   /*                              If this bit is not set, the target       */
   /*                              pixmap's buffer _must_ be zeroed before  */
   /*                              rendering.                               */
@@ -975,7 +975,7 @@ FT_BEGIN_HEADER
   /*    function.                                                          */
   /*                                                                       */
   /* <Fields>                                                              */
-  /*    target      :: The target bitmap.                                  */
+  /*    target      :: The target bitmenumap.                                  */
   /*                                                                       */
   /*    source      :: A pointer to the source glyph image (e.g., an       */
   /*                   @FT_Outline).                                       */
@@ -1140,7 +1140,7 @@ FT_BEGIN_HEADER
   /*                                                                       */
   /* <Description>                                                         */
   /*    Invoke a given raster to scan-convert a given glyph image into a   */
-  /*    target bitmap.                                                     */
+  /*    target bitmenumap.                                                     */
   /*                                                                       */
   /* <Input>                                                               */
   /*    raster :: A handle to the raster object.                           */
@@ -1189,7 +1189,7 @@ FT_BEGIN_HEADER
   /*                                                                       */
   /*    raster_reset  :: Used to reset the render pool within the raster.  */
   /*                                                                       */
-  /*    raster_render :: A function to render a glyph into a given bitmap. */
+  /*    raster_render :: A function to render a glyph into a given bitmenumap. */
   /*                                                                       */
   /*    raster_done   :: The raster destructor.                            */
   /*                                                                       */
