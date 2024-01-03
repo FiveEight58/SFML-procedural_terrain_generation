@@ -11,6 +11,11 @@ class Game
 private:
     renderer render;
     std::vector<Chunk> chunks;
+    Chunk chunk;
+
+    int loadcounter;
+    int x_counter = ((-chunkSize/2)-1);
+    int y_counter = -(chunkSize/2);
 
     //Game Runner
     bool IsRunning = true;
@@ -21,7 +26,6 @@ private:
     bool IsMovingRight = false;
     bool IsMovingLeft = false;
 public:
-    int drawcall = 0;
     MenuMap menumap;
 
     void Run() 
@@ -146,8 +150,28 @@ public:
 
         // Map generation
         if (menumap.MapGenerationRequested) {
-            chunks = menumap.regen(menumap.seed1);
-            menumap.MapGenerationRequested = false;
+            x_counter++;
+            if(x_counter == -(chunkSize/2) && y_counter == -(chunkSize/2))
+            {
+                MenuMap();
+                chunks.clear();
+            }
+            if(x_counter == chunkSize/2)
+            {
+                x_counter = -chunkSize/2;
+                y_counter++;
+            }
+            //each call to this chunk_gen function passes it a different seed
+            // std::cout<<"Seed: "<<menumap.seed1<<std::endl;
+            Chunk &chunk = chunks.emplace_back();
+            chunk = menumap.chunk_gen(menumap.seed1, x_counter, y_counter);
+            std::cout<<menumap.seed1<<std::endl;
+            if(x_counter == (chunkSize/2)-1 && y_counter == (chunkSize/2)-1)
+            {
+                menumap.MapGenerationRequested = false;
+                x_counter = ((-chunkSize/2)-1);
+                y_counter = (-chunkSize/2);
+            }
         }
 
         if(menumap.menumapselected)
@@ -162,8 +186,11 @@ public:
     {
         render.windows.clear();
         render.windows.setView(menumap.view);
+        for(Chunk const &chunk : chunks) 
+        {
+            render.windows.draw(chunk.sprite);
+        }
         render.windows.display();
     }
 };
-
 #endif
